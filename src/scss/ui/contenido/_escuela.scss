@@ -1,0 +1,24 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.school {
+    @include m.bgImage;
+    @include m.bgformat(url('../img/chef_bg.jpg'));
+    @include m.bgformat(url('../img/chef_bg.webp'));
+    @include m.bgformat(url('../img/chef_bg.avif'));
+    padding: 12.5rem 0;
+    text-align: center;
+    color: v.$white;
+
+    &__title {
+        font-weight: 700;
+    }
+    &__text {
+        font-size: 1.625rem;
+        max-width: 31.25rem;
+        margin: 0 auto;
+    }
+    &__link {
+        @include m.button(v.$primary, v.$white);
+    }
+}

@@ -318,4 +318,59 @@ p {
 .class__link:hover {
   background-color: #f1363a;
 }
+
+.school {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 12.5rem 0;
+  text-align: center;
+  color: #FFFFFF;
+}
+@supports (background-image: url("../img/chef_bg.jpg")) {
+  .school {
+    background-image: url("../img/chef_bg.jpg");
+  }
+}
+@supports (background-image: url("../img/chef_bg.webp")) {
+  .school {
+    background-image: url("../img/chef_bg.webp");
+  }
+}
+@supports (background-image: url("../img/chef_bg.avif")) {
+  .school {
+    background-image: url("../img/chef_bg.avif");
+  }
+}
+.school__title {
+  font-weight: 700;
+}
+.school__text {
+  font-size: 1.625rem;
+  max-width: 31.25rem;
+  margin: 0 auto;
+}
+.school__link {
+  background-color: #f46669;
+  padding: 1rem 2.5rem;
+  color: #FFFFFF;
+  -webkit-margin-before: 1.25rem;
+          margin-block-start: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .school__link {
+    inline-size: auto;
+  }
+}
+.school__link:hover {
+  background-color: #f1363a;
+}
 /*# sourceMappingURL=app.css.map */
