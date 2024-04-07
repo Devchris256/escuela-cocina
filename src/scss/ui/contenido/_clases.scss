@@ -1,0 +1,59 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.classes {
+    background-color: v.$grey;
+    padding: 3.125rem 0;
+    &__title {
+        @include m.title;
+    }
+    &__content {
+        @include m.tablet { 
+            align-items: start;
+            @include m.grid(2, 1.25rem);
+        }
+        @include m.desktop { 
+            @include m.grid(3, 1.25rem);
+        }
+    }
+}
+
+.class {
+    border: 1px solid darken( v.$grey, 10% );
+    background-color: v.$white;
+
+    &__img {
+        inline-size: 100%;
+        block-size: auto;
+    }
+
+
+    &__meta {
+        background-color: v.$primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .625rem;
+        color: v.$white;
+    }
+    &__price {
+        background-color: v.$secundary;
+        padding: .25rem;
+        font-size: .75rem;
+        font-weight: 700;
+        color: v.$black;
+        border-radius: .625rem;
+    }
+    &__content {
+        padding: 1.25rem;
+    }
+    &__description {
+        color: v.$primary;
+    }
+    &__link {
+        @include m.button(v.$primary, v.$white);
+        display: block;
+        font-size: 1rem;
+        padding: .625rem;
+    }
+}
