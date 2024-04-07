@@ -1,0 +1,23 @@
+@use '../../base/variables' as v;
+@use '../../base/minxis' as m;
+
+.nosotros {
+    padding: 3.125rem 0;
+    &__title {
+        @include m.title;
+
+    }
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(3, 1.25rem);
+        }
+    }
+
+
+    &__block {
+        text-align: center;
+    }
+    &__img {
+        margin: 0 auto;
+    }
+}

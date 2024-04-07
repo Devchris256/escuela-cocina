@@ -200,4 +200,33 @@ p {
 .block__text {
   font-size: 1.25rem;
 }
+
+.nosotros {
+  padding: 3.125rem 0;
+}
+.nosotros__title {
+  text-align: center;
+}
+.nosotros__title::after {
+  content: "";
+  display: block;
+  height: 6.25rem;
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media (min-width: 768px) {
+  .nosotros__grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.nosotros__block {
+  text-align: center;
+}
+.nosotros__img {
+  margin: 0 auto;
+}
 /*# sourceMappingURL=app.css.map */
