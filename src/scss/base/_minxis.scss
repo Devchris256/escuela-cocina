@@ -51,12 +51,18 @@
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin bgImage($url) {
-    background-image: url( $url );
+@mixin bgImage {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+@mixin bgformat($img) {
+    @supports(background-image: $img) {
+        background-image: ($img);
+    }
+}
+
 @mixin heading {
     text-align: center;
 

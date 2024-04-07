@@ -19,12 +19,14 @@
 /** Media Queries **/
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 300;
+  margin: 0;
 }
 
 .wrapper {
@@ -116,5 +118,86 @@ p {
 }
 .navigation__link:hover {
   color: #f46669;
+}
+
+@media (min-width: 768px) {
+  .blockes__grid {
+    display: grid;
+    gap: 0rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+  }
+}
+
+.block {
+  block-size: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.block:nth-child(1) {
+  background-color: #f46669;
+}
+.block:nth-child(2) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@supports (background-image: url("../img/bloque_1.jpg")) {
+  .block:nth-child(2) {
+    background-image: url("../img/bloque_1.jpg");
+  }
+}
+@supports (background-image: url("../img/bloque_1.webp")) {
+  .block:nth-child(2) {
+    background-image: url("../img/bloque_1.webp");
+  }
+}
+@supports (background-image: url("../img/bloque_1.avif")) {
+  .block:nth-child(2) {
+    background-image: url("../img/bloque_1.avif");
+  }
+}
+.block:nth-child(3) {
+  background-color: #c7c57d;
+}
+@media (min-width: 768px) {
+  .block:nth-child(3) {
+    grid-column: 2/3;
+  }
+}
+.block:nth-child(4) {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+@supports (background-image: url("../img/bloque_2.jpg")) {
+  .block:nth-child(4) {
+    background-image: url("../img/bloque_2.jpg");
+  }
+}
+@supports (background-image: url("../img/bloque_2.webp")) {
+  .block:nth-child(4) {
+    background-image: url("../img/bloque_2.webp");
+  }
+}
+@supports (background-image: url("../img/bloque_2.avif")) {
+  .block:nth-child(4) {
+    background-image: url("../img/bloque_2.avif");
+  }
+}
+.block__content {
+  max-inline-size: 20.5rem;
+  border-block: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.625rem 0;
+}
+.block__title {
+  text-transform: uppercase;
+}
+.block__text {
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=app.css.map */

@@ -2,12 +2,14 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
   
 body {
     font-family: v.$fontPrimary;
     font-size: 1rem;
     font-weight: 300;
+    margin: 0;
 }
 .wrapper {
     inline-size: 95%;
