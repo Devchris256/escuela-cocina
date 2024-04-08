@@ -373,4 +373,15 @@ p {
 .school__link:hover {
   background-color: #f1363a;
 }
+
+.footer {
+  padding: 1.875rem 0;
+  border-bottom: 0.5rem solid #f46669;
+}
+.footer__copyright {
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-margin-before: 1.875rem;
+          margin-block-start: 1.875rem;
+}
 /*# sourceMappingURL=app.css.map */
